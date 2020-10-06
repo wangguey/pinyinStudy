@@ -1,0 +1,58 @@
+<div class="row">
+    <div class="col-12">
+        <div>
+            <audio id='voice' controls autoplay>
+                <source src='' type="audio/wav">
+            </audio>
+        </div>
+        <form id='form' onSubmit="return false" method="post">
+            <table class="table table-striped ">
+                <tbody>
+                    <tr>
+                        <td align="right">
+                            <h4 class='text-dark' id='questionTip'>題目&nbsp&nbsp提示語:</h4>
+                        </td>
+                        <td>
+                            <h4 class='text-danger' id='tip'></h4>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="right">
+                            <h4 class='text-dark' id='answerTip'>輸入拼音符號:</h4>
+                        </td>
+                        <td>
+                            <h4>
+                                <input id="answer" class='text-danger' type="text" name="answer"
+                                    maxlength="6" size="6" autofocus>
+                            </h4>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="right">
+                            <h4 class='text-dark'>按<span style='color:red;'>&#8629;Enter</span>做下一題</h4>
+                        </td>
+                        <h4>
+                            <td class='text-primary'>
+                                <h4 style="display: inline">答對<i class="far fa-thumbs-up fa-2x"></i>
+                                </h4>
+                                <h4 style="display: inline" id='right'>0 </h4>
+                                <h4 style="display: inline">&nbsp&nbsp 答錯<i
+                                        class="far fa-thumbs-down fa-2x"></i>&nbsp</h4>
+                                <h4 style="display: inline" id='wrong'>0</h4>
+                                <h4 style="display: inline;visibility: hidden" id='end'>&nbsp&nbsp挑戰結束</h4>
+                                <h4>
+                                    <a href="#correctSection" id='linkCorrect' class='text-danger'
+                                        style='display:none'>請按我訂正錯誤<i
+                                            class="fas fa-ambulance fa-2x"></i></a>
+                                </h4>
+                            </td>
+                        </h4>
+                    </tr>
+                </tbody>
+            </table>
+        </form>
+    </div>
+</div>
+<div class='mt-0'>
+    <img src="/assets/images/test2.jpg" style="width:30%;" alt="pinyin show">
+</div>

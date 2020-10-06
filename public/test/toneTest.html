@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="study pinyin happy">
+    <meta name="keywords" content="pinyin">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="/lib/bootstrap/4.4.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/lib/font-awesome/5.13.0/all.min.css">
+
+    <title>快樂學拼音</title>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="/main.css" />
+    <script src="/lib/jQuery/jquery-3.4.1.min.js"></script>
+    <script src="/lib/_test/toneTest.js"> </script>
+
+    <style>
+        img {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+
+</head>
+
+
+<body onload=showFirst()>
+    <div class="container-fluid">
+        <section id='testSection'>
+            <!--主選單start-->
+            <div w3-include-html="/navbar.html"></div>
+            <!--主選單 end-->
+            <!-- test start-->
+            <!-- <section id='testSection'> -->
+            <div>
+                <h4 class='text-danger'>24個全字拼音加聲調挑戰(輕聲按空白鍵)</h4>
+            </div>
+            <!--common start-->
+            <!-- <div w3-include-html="/test/commonTest.html"></div> -->
+            <div class="row">
+                <div class="col-12">
+                    <div>
+                        <audio id='voice' controls autoplay>
+                            <source src='' type="audio/wav">
+                        </audio>
+                    </div>
+                    <form id='form' onSubmit="return false" method="post">
+                        <table class="table table-striped ">
+                            <tbody>
+                                <tr>
+                                    <td align="right">
+                                        <h4 class='text-dark' id='questionTip'>題目&nbsp&nbsp提示語:</h4>
+                                    </td>
+                                    <td>
+                                        <h4 class='text-danger' id='tip'></h4>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="right">
+                                        <h4 class='text-dark' id='answerTip'>輸入拼音符號:</h4>
+                                    </td>
+                                    <td>
+                                        <h4>
+                                            <input id="answer" class='text-danger' type="text" name="answer"
+                                                maxlength="6" size="6" autofocus>
+                                        </h4>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="right">
+                                        <h4 class='text-dark'>按<span style='color:red;'>&#8629;Enter</span>做下一題</h4>
+                                    </td>
+                                    <h4>
+                                        <td class='text-primary'>
+                                            <h4 style="display: inline">答對<i class="far fa-thumbs-up fa-2x"></i>
+                                            </h4>
+                                            <h4 style="display: inline" id='right'>0 </h4>
+                                            <h4 style="display: inline">&nbsp&nbsp 答錯<i
+                                                    class="far fa-thumbs-down fa-2x"></i>&nbsp</h4>
+                                            <h4 style="display: inline" id='wrong'>0</h4>
+                                            <h4 style="display: inline;visibility: hidden" id='end'>&nbsp&nbsp挑戰結束</h4>
+                                            <h4>
+                                                <a href="#correctSection" id='linkCorrect' class='text-danger'
+                                                    style='display:none'>請按我訂正錯誤<i
+                                                        class="fas fa-ambulance fa-2x"></i></a>
+                                            </h4>
+                                        </td>
+                                    </h4>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </form>
+                </div>
+            </div>
+            <div class='mt-0'>
+                <img src="/assets/images/test2.jpg" style="width:30%;" alt="pinyin show">
+            </div>
+            <!--common end-->
+            <br>
+            <br>
+        </section>
+        <!-- test end-->
+
+        <!-- correct start-->
+        <!-- <div w3-include-html="/test/correctTest.html"></div> -->
+        <div>
+            <section id='correctSection'>
+                <div class="correctSection-container">
+                    <div class="row">
+                        <div class="col-12">
+                            <div>
+                                <div class="col text-center">
+                                    <button id='startCorrect' type="button" class="btn btn-primary btn-lg">開始訂正<i
+                                            class="fas fa-chevron-circle-down fa-2x"></i></button>
+                                </div>
+                                <!-- <h4 class='text-danger' >訂正錯誤</h4> -->
+                                <audio id='voiceCorrect' style='visibility: hidden' controls autoplay>
+                                    <source src='' type="audio/wav">
+                                </audio>
+                            </div>
+                            <form id='formCorrect' onSubmit="return false" method="post">
+                                <table class="table table-striped ">
+                                    <tbody>
+                                        <tr>
+                                            <td align="right">
+                                                <h4 id='tipQuestion' style='visibility: hidden'>題目&nbsp&nbsp提示語:</h4>
+                                            </td>
+                                            <td>
+                                                <h4 class='text-danger' id='tipCorrect' style='visibility: hidden'></h4>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td align="right">
+                                                <h4 id='tipPractice' style='visibility: hidden'>輸入拼音符號:</h4>
+                                            </td>
+                                            <td>
+                                                <h4>
+                                                    <input id="answerCorrect" class='text-danger' type="text"
+                                                        maxlength="6" size="6" style='visibility: hidden'>
+                                                </h4>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td align="center">
+                                                <h4 class='text-dark'>按<span style='color:red'>&#8629;Enter</span>核對答案
+                                                </h4>
+                                            </td>
+                                            </td>
+                                            <h4>
+                                                <td class='text-primary'>
+                                                    <h4>
+                                                        <a href="#testSection" id='linkTest' class='text-danger'
+                                                            style='display:none'>訂正結束,到挑戰開頭<i
+                                                                class="fas fa-car fa-2x"></i></a>
+                                                    </h4>
+                                                </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </form>
+                        </div>
+                    </div>
+                    <div class='mt-0'>
+                        <img src="/assets/images/correct2.jpg" style="width:30%;" alt="pinyin show">
+                    </div>
+                </div>
+            </section>
+        </div>
+        <!-- correct end-->
+        <!-- footer 開始 -->
+        <div w3-include-html="/footer.html"></div>
+        <!-- footer 結束 -->
+    </div>
+
+</body>
+
+<script src="/lib/_common/include.js"></script>
+<script src="/lib/font-awesome/5.13.0/all.min.js"></script>
+<script src="/lib/popper/1.16.1/popper.min.js"></script>
+<script src="/lib/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+
+</html>

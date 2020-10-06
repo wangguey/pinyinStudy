@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="study pinyin happy">
+    <meta name="keywords" content="pinyin">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="/lib/bootstrap/4.4.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/lib/font-awesome/5.13.0/all.min.css">
+
+    <title>快樂學拼音</title>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="/main.css" />
+    <link rel="stylesheet" href="/lib/_test/keyboard.css" />
+    <script src="/lib/jQuery/jquery-3.4.1.min.js"></script>
+   
+</head>
+
+<body>
+    <div class="container-fluid">
+        <!--主選單start-->
+        <div w3-include-html="/navbar.html"></div>
+        <!--主選單 end-->
+
+        <!--breadcrumb start-->
+        <!-- <div class="row">
+            <div class="col-12">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb text-info">
+                        <li class="breadcrumb-item"><a href="\"><i class="fas fa-home"></i>首頁</a></li>
+                        <li class="breadcrumb-item active text-info" aria-current="page">電腦英打</li>
+                        <li class="breadcrumb-item active text-info" aria-current="page">打一字一分鐘</li>
+                    </ol>
+                </nav>
+            </div>
+        </div> -->
+        <!-- breadcrumb end-->
+
+        <!--typing start-->
+
+        <div class="row">
+            <div class="col-12 text-center noto-sans">
+                <!-- <div class="col-12 text-center noto-sans"> -->
+                <h4>
+                    <form>
+                        <label for="custom-raio">選擇：</label>
+                        <!-- Default checked -->
+                        <div class="custom-control custom-radio custom-control-inline">
+                            <input type="radio" value="homeTyping" class="custom-control-input" id="homeTyping"
+                                name="TypingRadios" checked="">
+                            <label class="custom-control-label" for="homeTyping">本位列</label>
+                        </div>
+                        <!-- Default unchecked -->
+                        <div class="custom-control custom-radio custom-control-inline">
+                            <input type="radio" value="upperTyping" class="custom-control-input" id="upperTyping"
+                                name="TypingRadios">
+                            <label class="custom-control-label" for="upperTyping">上一列</label>
+                        </div>
+                        <div class="custom-control custom-radio custom-control-inline">
+                            <input type="radio" value="lowerTyping" class="custom-control-input" id="lowerTyping"
+                                name="TypingRadios">
+                            <label class="custom-control-label" for="lowerTyping">下一列</label>
+                        </div>
+                        <div class="custom-control custom-radio custom-control-inline">
+                            <input type="radio" value="allTyping" class="custom-control-input" id="allTyping"
+                                name="TypingRadios">
+                            <label class="custom-control-label" for="allTyping">全部字母</label>
+                        </div>
+                        <div>
+                            <button type="submit" id="begin">開始</button>
+                        </div>
+                    </form>
+                </h4>
+                <br>
+                <h2>
+                    <div style="font-family:'Arial Black'" class="label label-default text-primary text-center"
+                        id="question" maxlength="1">
+                    </div>
+                    <div class="text-center">
+                        <input type="text" size="1" maxlength="1" id="answer"
+                            style="font-family:'Arial Black','ime-mode:inactive'" onkeypress="inputFunction(event)"
+                            class='text-danger' autofocus>
+                        <!-- onkeypress="inputFunction(event)" autofocus> -->
+
+                    </div>
+                    <div class="text-right text-primary ">
+                        <label id="score">打對：0 鍵&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</label>
+                        <label id="time">00:00&nbsp&nbsp&nbsp&nbsp&nbsp</label>
+                    </div>
+                </h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 text-center">
+                <h5>
+                    <br>
+                    <p>左手食指放在"f"鍵，右手食指放在"j"鍵，不看鍵盤，隨時歸位。</p>
+                </h5>
+            </div>
+            <div class="col-12">
+                <ul id="parentUpper">
+                    <li id="q" style="background-color:lightcoral;">q</li>
+                    <li id="w" style="background-color:sandybrown;">w</li>
+                    <li id="e" style="background-color:yellow;">e</li>
+                    <li id="r" style="background-color:deepskyblue;">r</li>
+                    <li id="t" style="background-color:deepskyblue;">t</li>
+                    <li id="y" style="background-color:limegreen;">y</li>
+                    <li id="u" style="background-color:limegreen;">u</li>
+                    <li id="i" style="background-color:yellow;">i</li>
+                    <li id="o" style="background-color:sandybrown;">o</li>
+                    <li id="p" style="background-color:lightcoral;">p</li>
+                </ul>
+                <br>               
+                <ul id="parentHome">
+                    <li id="a" style="background-color:lightcoral;">a</li>
+                    <li id="s" style="background-color:sandybrown;">s</li>
+                    <li id="d" style="background-color:yellow;">d</li>
+                    <li id="f" style="background-color:hotpink;">f</li>
+                    <li id="g" style="background-color:deepskyblue;">g</li>
+                    <li id="h" style="background-color:limegreen;">h</li>
+                    <li id="j" style="background-color:hotpink;;">j</li>
+                    <li id="k" style="background-color:yellow;">k</li>
+                    <li id="l" style="background-color:sandybrown;">l</li>
+                    <li style="background-color:lightcoral;">;</li>
+                </ul>
+                <br>                
+                <ul id="parentLower">
+                    <li id="z" style="background-color:lightcoral;">z</li>
+                    <li id="x" style="background-color:sandybrown;">x</li>
+                    <li id="c" style="background-color:yellow;">c</li>
+                    <li id="v" style="background-color:deepskyblue;">v</li>
+                    <li id="b" style="background-color:deepskyblue;">b</li>
+                    <li id="n" style="background-color:limegreen;">n</li>
+                    <li id="m" style="background-color:limegreen;">m</li>
+                    <li style="background-color:yellow;">,</li>
+                    <li style="background-color:sandybrown">.</li>
+                    <li style="background-color:lightcoral;">/</li>
+                </ul>
+            </div>
+            <div class="col-12 ml-5">
+                <img src="/assets/images/typeFinger.jpg" style="width:65%;" alt="typing" id='typingjpg'>
+            </div>
+        </div>
+        <!-- typing end-->
+        <!-- footer 開始 -->
+        <div w3-include-html="/footer.html"></div>
+        <!-- footer 結束 -->
+    </div>
+</body>
+<script src="/lib/_test/typingOne.js"></script>
+<script src="/lib/font-awesome/5.13.0/all.min.js"></script>
+<script src="/lib/popper/1.16.1/popper.min.js"></script>
+<script src="/lib/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+<script src="/lib/_common/include.js"></script>
+
+</html>

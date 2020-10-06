@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="study pinyin happy">
+  <meta name="keywords" content="pinyin">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+
+  <link rel="stylesheet" href="/lib/bootstrap/4.4.1/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="/lib/bootstrap/5.1.1/bootstrap-social.min.css" />
+  <link rel="stylesheet" href="/lib/font-awesome/5.13.0/all.min.css">
+
+  <!-- update the version number as needed -->
+  <script defer src="/__/firebase/7.6.1/firebase-app.js"></script>
+  <!-- include only the Firebase features as you need -->
+  <script defer src="/__/firebase/7.6.1/firebase-auth.js"></script>
+  <script defer src="/__/firebase/7.6.1/firebase-database.js"></script>
+  <script defer src="/__/firebase/7.6.1/firebase-messaging.js"></script>
+  <script defer src="/__/firebase/7.6.1/firebase-storage.js"></script>
+  <!-- initialize the SDK after all desired features are loaded -->
+  <script defer src="/__/firebase/init.js"></script>
+
+  <title>快樂學拼音</title>
+  <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="/main.css">
+
+</head>
+
+<body>
+  <div class="container-fluid">
+    <!--主選單start-->
+    <div w3-include-html="/navbar.html"></div>
+    <!--主選單 end-->
+
+    <!--breadcrumb start-->
+    <div class="row">
+      <div class="col-12">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb text-info">
+            <li class="breadcrumb-item"><a href="\"><i class="fas fa-home"></i>首頁</a></li>
+            <li class="breadcrumb-item active text-info" aria-current="page">留言板</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+    <!-- breadcrumb end-->
+
+    <!-- 登入表單 開始 -->
+    <div class="row">
+      <div class="col-6 m-auto">
+        <div class="text-center">
+          <h5>現有帳號快速登入</h5>
+        </div>
+        <div class="text-center">
+          <!-- <a class="btn btn-social btn-lg btn-github text-white col-5" id='anonymousLogin'>
+                <span class="fab fa-snapchat-ghost"></span> Sign in anonymously
+            </a>
+            <br>
+            <br> -->
+          <a class="btn btn-social btn-lg btn-google text-white col-5" id="googleLogin">
+            <span class="fab fa-google"></span> 透過 Google 登入
+          </a>
+          <br>
+          <!-- <a class="btn btn-social btn-lg btn-facebook text-white col-5" id="fcbLogin">
+            <span class="fab fa-facebook"></span> 透過 Facebook 登入
+          </a> -->
+        </div>
+        <br>
+        <br>
+        <div class="text-center">
+          <h5>or其他帳號登入</h5>
+        </div>
+        <form class="m-3 needs-validation" onSubmit="return go2MessagePage()" method="post">
+        <!-- <form class="m-3 needs-validation" action="/documents/message.html" method="post"> -->
+          <div class="form-group row">
+            <div class="col-sm-2"></div>
+            <label for="name" class="col-sm-2 col-form-label">姓名</label>
+            <div class="col-sm-8">
+              <input type="text" id="name" placeholder="name" required>
+            </div>
+          </div>
+          <div class="form-group row">
+            <div class="col-sm-2"></div>
+            <label for="email" class="col-sm-2 col-form-label">電子郵件</label>
+            <div class="col-sm-8">
+              <input type="email" class="form-control" id="email" placeholder="email@example.com" required>
+            </div>
+          </div>
+          <div class="form-group row">
+            <div class="col-sm-10 offset-5">
+              <button class="btn btn-primary" type="submit" id='login'>登入<i
+                  class="fas fa-sign-in-alt fa-1x"></i></button>
+            </div>
+          </div>
+        </form>
+        <!-- 登入表單 結束 -->
+      </div>
+
+    </div>
+    <!-- 登入表單 結束 -->
+
+    <!-- footer 開始 -->
+    <div w3-include-html="/footer.html"></div>
+    <!-- footer 結束 -->
+  </div>
+
+
+</body>
+<script src="/lib/jQuery/jquery-3.4.1.min.js"></script>
+<script src="/lib/font-awesome/5.13.0/all.min.js"></script>
+<script src="/lib/popper/1.16.1/popper.min.js"></script>
+<script src="/lib/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+<script src="/lib/_common/include.js"></script>
+<script src="/lib/_common/login.js"></script>
+
+</html>

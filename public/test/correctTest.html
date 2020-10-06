@@ -1,0 +1,63 @@
+<div>
+    <section id='correctSection'>
+        <div class="correctSection-container">
+            <div class="row">
+                <div class="col-12">
+                    <div>
+                        <div class="col text-center">
+                            <button id='startCorrect' type="button" class="btn btn-primary btn-lg">開始訂正<i
+                                    class="fas fa-chevron-circle-down fa-2x"></i></button>
+                        </div>
+                        <!-- <h4 class='text-danger' >訂正錯誤</h4> -->
+                        <audio id='voiceCorrect' style='visibility: hidden' controls autoplay>
+                            <source src='' type="audio/wav">
+                        </audio>
+                    </div>
+                    <form id='formCorrect' onSubmit="return false" method="post">
+                        <table class="table table-striped ">
+                            <tbody>
+                                <tr>
+                                    <td align="right">
+                                        <h4 id='tipQuestion' style='visibility: hidden'>題目&nbsp&nbsp提示語:</h4>
+                                    </td>
+                                    <td>
+                                        <h4 class='text-danger' id='tipCorrect' style='visibility: hidden'></h4>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="right">
+                                        <h4 id='tipPractice' style='visibility: hidden'>輸入拼音符號:</h4>
+                                    </td>
+                                    <td>
+                                        <h4>
+                                            <input id="answerCorrect" class='text-danger' type="text"
+                                                maxlength="6" size="6" style='visibility: hidden'>
+                                        </h4>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="center">
+                                        <h4 class='text-dark'>按<span style='color:red'>&#8629;Enter</span>核對答案
+                                        </h4>
+                                    </td>
+                                    </td>
+                                    <h4>
+                                        <td class='text-primary'>
+                                            <h4>
+                                                <a href="#testSection" id='linkTest' class='text-danger'
+                                                    style='display:none'>訂正結束,到挑戰開頭<i
+                                                        class="fas fa-car fa-2x"></i></a>
+                                            </h4>
+                                        </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </form>
+                </div>
+            </div>
+            <div class='mt-0'>
+                <img src="/assets/images/correct2.jpg" style="width:30%;" alt="pinyin show">
+            </div>
+        </div>
+    </section>
+</div>

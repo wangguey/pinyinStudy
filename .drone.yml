@@ -1,0 +1,52 @@
+# workspace:
+#   base: /node
+#   path: drone/node-example
+
+# clone:
+#   git:
+#     image: plugins/git
+#     depath: 50
+#     tags: true
+
+pipeline:
+  docker-compose:
+    image: docker/compose:1.24.0
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    commands:
+      - ls -l
+      - cat /drone/src/docker-compose.yaml
+      - docker-compose up -f /drone/src/docker-compose.yaml
+
+  frontend:
+    image: node:8.3.0
+    group: build
+    environment:
+      - API_TOKEN=00998877665544332211
+    secrets: [name, phone]
+    commands:
+      - echo $${API_TOKEN}
+      - echo $NAME
+      - echo $PHONE
+      - python app.py
+      # - yarn add mocha
+      # - ls ./node_modules/.bin/mocha
+  backend:
+    image: node:8.3.0
+    group: build
+    commands:
+      - echo "backend testing"
+      - ls -l
+# services:
+#   elasticsearch:
+#     image: docker.elastic.co/elasticsearch/elasticsearch:7.5.0
+
+#   redis:
+#     image: redis:latest
+
+#   postgres:
+#     image: postgres:latest
+#     environments:
+#       - POSTGRES_DB=homestead
+#       - POSTGRES_USER=homestead
+#       - POSTGRES_PASSWORD=secret

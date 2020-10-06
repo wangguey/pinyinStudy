@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="study pinyin happy">
+    <meta name="keywords" content="pinyin">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="/lib/bootstrap/4.4.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/lib/font-awesome/5.13.0/all.min.css">
+
+    <title>快樂學拼音</title>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="/main.css" />
+    <script src="/lib/jQuery/jquery-3.4.1.min.js"></script>
+    <style>
+        #typingjpg {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .colored {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <!--主選單start-->
+        <div w3-include-html="/navbar.html"></div>
+        <!--主選單 end-->
+
+        <!--breadcrumb start-->
+        <div class="row">
+            <div class="col-12">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb text-info">
+                        <li class="breadcrumb-item"><a href="\"><i class="fas fa-home"></i>首頁</a></li>
+                        <li class="breadcrumb-item active text-info" aria-current="page">電腦英打</li>
+                        <li class="breadcrumb-item active text-info" aria-current="page">打一行</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+        <!-- breadcrumb end-->
+
+        <!--typing start-->
+
+        <div class="row">
+            <div class="col-12 text-center noto-sans">
+                <!-- <div class="col-12 text-center noto-sans"> -->
+                <h4>
+                    <form>
+                        <label for="custom-raio">選擇：</label>
+                        <!-- Default checked -->
+                        <div class="custom-control custom-radio custom-control-inline">
+                            <input type="radio" value="homeTyping" class="custom-control-input" id="homeTyping"
+                                name="TypingRadios" checked="">
+                            <label class="custom-control-label" for="homeTyping">本位列</label>
+                        </div>
+                        <!-- Default unchecked -->
+                        <div class="custom-control custom-radio custom-control-inline">
+                            <input type="radio" value="upperTyping" class="custom-control-input" id="upperTyping"
+                                name="TypingRadios">
+                            <label class="custom-control-label" for="upperTyping">上一列</label>
+                        </div>
+                        <div class="custom-control custom-radio custom-control-inline">
+                            <input type="radio" value="lowerTyping" class="custom-control-input" id="lowerTyping"
+                                name="TypingRadios">
+                            <label class="custom-control-label" for="lowerTyping">下一列</label>
+                        </div>
+                        <div class="custom-control custom-radio custom-control-inline">
+                            <input type="radio" value="allTyping" class="custom-control-input" id="allTyping"
+                                name="TypingRadios">
+                            <label class="custom-control-label" for="allTyping">全部字母</label>
+                        </div>
+                        <div>
+                            <button type="submit" id="begin">開始</button>
+                        </div>
+                    </form>
+                </h4>
+                <h2>
+                    <div style="font-family:'Courier New','font-weight:bold'"
+                        class="label label-default text-primary text-left" id="question">
+                    </div>
+                    <div class="text-left">
+                        <input type="tel" size="60" maxlength="61" id="answer"
+                            style="font-family:'Courier New','font-weight:bold','ime-mode:inactive'"
+                            onkeypress="inputFunction(event)" autofocus>
+                        <p id="result" style="font-family:'Courier New','font-weight:bold'"></p>
+                    </div>
+                    <div class="text-center text-primary">
+                        <p id="estimation"></p>
+                        <p id="score" class="text-danger"></p>
+
+                    </div>
+                </h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 text-center">
+                <h4>
+                    <br>
+                    <p>左手食指放在"f"鍵，右手食指放在"j"鍵，不看鍵盤，隨時歸位。</p>
+                </h4>
+            </div>
+            <div class="col-12">
+                <img src="/assets/images/type.jpg" style="width:80%;" alt="typing" id='typingjpg'>
+            </div>
+        </div>
+        <!-- typing end-->
+        <!-- footer 開始 -->
+        <div w3-include-html="/footer.html"></div>
+        <!-- footer 結束 -->
+    </div>
+</body>
+
+<script src="/lib/_test/typing.js"></script>
+<script src="/lib/font-awesome/5.13.0/all.min.js"></script>
+<script src="/lib/popper/1.16.1/popper.min.js"></script>
+<script src="/lib/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+<script src="/lib/_common/include.js"></script>
+
+</html>

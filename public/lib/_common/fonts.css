@@ -1,0 +1,400 @@
+* {
+  /* font-family: "Segoe UI", "Noto Sans TC", "Microsoft JhengHei"; */
+  /* font-family: "Noto Serif JP Black"; */
+  /* font-family:  "Noto Sans TC", "Segoe UI", sans-serif, "Microsoft JhengHei"; */
+  font-family: "Noto Serif TC", serif;
+  font-size: 300;
+  /* color:#3C3D3E; #343D46 */
+}
+
+
+.font-huge {
+  font-size: 500%;
+  font-size: bolder;
+}
+
+
+
+.fixed-height {
+  /* display: block ; */
+  /* height: 10rem; */
+  /* line-height: 120px; */
+  height: 140px;
+}
+
+.font-bold {
+  font-size: bold;
+}
+
+.font-bolder {
+  font-size: bolder;
+}
+
+.v-middle {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.noto-sans {
+  font-family: "Noto Sans TC", sans-serif, "Microsoft YaHei" !important;
+  /* color: red !important; */
+}
+
+.noto-serif {
+  font-family: "Noto Serif TC", serif;
+}
+
+.font-size-70 {
+  font-size: 70%;
+}
+
+.font-size-75 {
+  font-size: 75%;
+}
+
+.font-size-80 {
+  font-size: 80%;
+}
+
+.font-size-85 {
+  font-size: 85%;
+}
+
+.font-size-90 {
+  font-size: 90%;
+}
+
+.font-size-95 {
+  font-size: 95%;
+}
+
+.font-size-100 {
+  font-size: 100%;
+}
+
+.font-size-105 {
+  font-size: 105%;
+}
+
+.font-size-108 {
+  font-size: 108%;
+}
+
+.font-size-110 {
+  font-size: 110%;
+}
+
+.font-size-115 {
+  font-size: 115%;
+}
+
+.font-size-120 {
+  font-size: 120%;
+}
+
+.font-size-135 {
+  font-size: 135%;
+}
+
+.font-size-150 {
+  font-size: 150%;
+}
+
+.font-size-165 {
+  font-size: 165%;
+}
+
+.font-size-180 {
+  font-size: 180%;
+}
+
+.font-size-200 {
+  font-size: 200%;
+}
+
+.font-size-250 {
+  font-size: 250%;
+}
+
+.font-size-300 {
+  font-size: 300%;
+}
+
+.font-size-400 {
+  font-size: 400%;
+}
+
+.font-size-500 {
+  font-size: 500%;
+}
+
+.font-size-600 {
+  font-size: 600%;
+}
+
+.font-size-700 {
+  font-size: 700%;
+}
+
+.font-size-800 {
+  font-size: 800%;
+}
+
+.font-size-900 {
+  font-size: 900%;
+}
+
+.font-size-1000 {
+  font-size: 1000%;
+}
+
+.font-size-1500 {
+  font-size: 1500%;
+}
+
+.font-size-2000 {
+  font-size: 2000%;
+}
+
+.font-size-2500 {
+  font-size: 2500%;
+}
+
+.font-size-3000 {
+  font-size: 3000%;
+}
+
+.font-size-5000 {
+  font-size: 5000%;
+}
+
+.font-weight-300 {
+  font-weight: 300;
+}
+
+.font-weight-400 {
+  font-weight: 400;
+}
+
+.font-weight-500 {
+  font-weight: 500;
+}
+
+.font-weight-600 {
+  font-weight: 600;
+}
+
+.font-weight-700 {
+  font-weight: 700;
+}
+
+.font-weight-800 {
+  font-weight: 800;
+}
+
+.font-weight-900 {
+  font-weight: 900;
+}
+
+.line-height-75 {
+  line-height: 75%;
+}
+
+.line-height-80 {
+  line-height: 80%;
+}
+
+.line-height-85 {
+  line-height: 85%;
+}
+
+.line-height-90 {
+  line-height: 90%;
+}
+
+.line-height-95 {
+  line-height: 95%;
+}
+
+.line-height-100 {
+  line-height: 100%;
+}
+
+.line-height-105 {
+  line-height: 105%;
+}
+
+.line-height-108 {
+  line-height: 108%;
+}
+
+.line-height-110 {
+  line-height: 110%;
+}
+
+.line-height-115 {
+  line-height: 115%;
+}
+
+.line-height-120 {
+  line-height: 120%;
+}
+
+.line-height-135 {
+  line-height: 135%;
+}
+
+.line-height-150 {
+  line-height: 150%;
+}
+
+.line-height-165 {
+  line-height: 165%;
+}
+
+.line-height-180 {
+  line-height: 180%;
+}
+
+.line-height-200 {
+  line-height: 200%;
+}
+
+.line-height-250 {
+  line-height: 250%;
+}
+
+.line-height-300 {
+  line-height: 300%;
+}
+
+.line-height-400 {
+  line-height: 400%;
+}
+
+.line-height-500 {
+  line-height: 500%;
+}
+
+.line-height-600 {
+  line-height: 600%;
+}
+
+.line-height-700 {
+  line-height: 700%;
+}
+
+.line-height-800 {
+  line-height: 800%;
+}
+
+.line-height-900 {
+  line-height: 900%;
+}
+
+.line-height-1000 {
+  line-height: 1000%;
+}
+
+.line-height-1500 {
+  line-height: 1500%;
+}
+
+.line-height-2000 {
+  line-height: 2000%;
+}
+
+.line-height-2500 {
+  line-height: 2500%;
+}
+
+.line-height-3000 {
+  line-height: 3000%;
+}
+
+.line-height-5000 {
+  line-height: 5000%;
+}
+
+
+.font-gray {
+  filter: grayscale(50%);
+  color: red;
+}
+
+.title1 {
+  color:#003366; /* #343D46 */
+  font-size: 300%;
+  font-weight: 700;
+  font-family: "Noto Sans TC", sans-serif, "Microsoft YaHei" !important;
+  /* text-shadow: 0.1vw 0.5vh #BDC0C3;   #ADB1B5 */
+  text-shadow: 0.03em 0.06em #CCD6E0;   /* #ADB1B5 */
+}
+
+.title2 {
+  color:#454648; /* #343D46 */
+  font-size: 150%;
+  font-weight: 700;
+  font-family: "Noto Sans TC", sans-serif, "Microsoft YaHei" !important;
+  /* text-shadow: 0.1vw 0.5vh #BDC0C3;   #ADB1B5 */
+  text-shadow: 0.03em 0.06em #BDC0C3;   /* #ADB1B5 */
+}
+
+.font-navbar-brand {
+  font-family: "Noto Sans TC", sans-serif, "Microsoft YaHei" !important;
+  font-size: 1.8em;
+  font-weight: 700;
+  line-height: 1.8em;
+  color: #F8F8E6 !important;
+  /* color: red !important; */
+   /* #F0E8EB;  #e2e6bf; */
+
+}
+/* noto-sans font-size-150 font-weight-700 line-height-100 */
+
+.font-navbar-link {
+   font-family: "Noto Sans TC", sans-serif, "Microsoft YaHei" !important;
+   font-size: 1.5em;
+   font-weight: 400;
+   /* color: #BEB8B8 !important; */
+   /* #F0E8EB !important;  #e2e6bf; */
+}
+
+li.nav-item > a.disabled {
+  /* color: #C7C7C7 !important; */
+}
+
+
+.font-tall {
+  transform: scale(1.0,1.2);
+}
+
+.font-footer {
+  font-family: "Noto Serif TC", serif !important;
+  font-size: 1.3em;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  /* color: #e2e6bf !important; */
+  color: rgba(0, 0, 0, 0.541) !important;
+  /* color: red !important; */
+}
+
+.font-footer-delimiter {
+  font-family: "Noto Serif TC", serif !important;
+  font-size: 1em;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  color: #e2e6bf !important;
+  /* color: black !important; */
+
+}
+
+
+
+/* .fa-copyright {
+  color: red !important;
+} */
+
+.flip-h {
+  transform: scale(-1, 1);
+}

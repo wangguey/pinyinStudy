@@ -1,0 +1,42 @@
+<div class="row">
+    <div class="col-12">
+        <div>
+            <audio id='voice' controls autoplay>
+                <source src='' type="audio/wav">
+            </audio>
+        </div>
+        <form id='form' onSubmit="return false" method="post">
+            <table class="table table-striped ">
+                <tbody>
+                    <tr>
+                        <td align="right">
+                            <h4>題目&nbsp&nbsp提示語:</h4>
+                        </td>
+                        <td>
+                            <h4 class='text-danger' id='tip'></h4>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="right">
+                            <h4>輸入拼音符號:</h4>
+                        </td>
+                        <td>
+                            <h4>
+                                <input id="answer" class='text-danger' type="text" name="answer" maxlength="6"
+                                    size="6" autofocus>
+                            </h4>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" align="center">
+                            <h4 class='text-dark'>按<span style='color:red;'>&#8629;enter</span>核對答案</h4>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </form>
+    </div>
+</div>
+<div class='mt-0'>
+    <img src="/assets/images/practice2.jpg" style="width:50%;" alt="pinyin show">
+</div>

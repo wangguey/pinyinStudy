@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="study pinyin happy">
+    <meta name="keywords" content="pinyin">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="/lib/bootstrap/4.4.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/lib/font-awesome/5.13.0/all.min.css">
+
+    <script src="/lib/jQuery/jquery-3.4.1.min.js"></script>
+    <script src="/lib/pure-js/pure.js"></script>
+
+    <!-- <script src="http://pure.github.io/pure/libs/pure.js"></script> -->
+
+    <title>快樂學拼音</title>
+    <link rel="shortcut icon" id="favicon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="/main.css" />
+
+    <style>
+        a {
+            color: #a900ff;
+            text-decoration: none;
+            background-color: transparent;
+        }
+
+        *,
+        ::after,
+        ::before {
+            box-sizing: border-box;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container-fluid">
+        <!--主選單start-->
+        <div w3-include-html="/navbar.html"></div>
+        <!--主選單 end-->
+        <!--breadcrumb start-->
+        <div class="row">
+            <div class="col-12">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb text-info">
+                        <li class="breadcrumb-item"><a href="\"><i class="fas fa-home"></i>首頁</a></li>
+                        <li class="breadcrumb-item"> 為何學拼音 </li>
+                        <li class="breadcrumb-item active text-info" aria-current="page">相關連結</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+        <!-- breadcrumb end-->
+
+        <!--link  header start-->
+        <div class="row" style="font-size: 100%;">
+            <div class="title">
+                <h2>相關連結<img src="/assets/images/link.png" alt=""></h2>
+            </div>
+        </div>
+        <!--link  header end-->
+        <div class="row">
+            <div class="col-2"></div>
+            <div class="col-10">
+                <!-- link content start -->
+                <div class="row users">
+                    <div class="card border-primary userinfo col-3 m-3">
+                        <a class='linksite' href="" title="開新視窗,連至" target="_blank">
+                            <h5 class="card-title">Card title</h5>
+                            <img class="card-img-bottom" src="" alt="Card image cap">
+                        </a>
+                    </div>
+                </div>
+                <!--link content  end-->
+            </div>
+        </div>
+        <!-- footer 開始 -->
+        <div w3-include-html="/footer.html"></div>
+        <!-- footer 結束 -->
+    </div>
+
+    <!-- pure.js start-->
+    <script>
+        // 開始 使用者
+        var data_userinfo = {
+            users: [
+                {
+                    title: 'FB「支持以拼音取代注音教學」',
+                    photo: '/assets/images/pinyin.jpg',
+                    linksite: "https://www.facebook.com/groups/183224001724961/about/"
+                },
+                {
+                    title: '各種拼音簡介',
+                    photo: '/assets/images/wiki.png',
+                    linksite: "https://zh.wikipedia.org/w/index.php?sort=relevance&search=%E6%B1%89%E8%AF%AD%E6%8B%BC%E9%9F%B3%E6%BC%A2%E8%AA%9E%E6%8B%BC%E9%9F%B3&title=Special%3A%E6%90%9C%E7%B4%A2&profile=advanced&fulltext=1&advancedSearch-current=%7B%7D&ns0=1"
+                },
+                {
+                    title: '漢語拼音',
+                    photo: '/assets/images/wiki.png',
+                    linksite: "https://zh.wikipedia.org/wiki/%E6%B1%89%E8%AF%AD%E6%8B%BC%E9%9F%B3"
+                },
+                {
+                    title: '台語羅馬拼音',
+                    photo: '/assets/images/romanpinyin.gif',
+                    linksite: "http://163.26.191.1/formosa/interest141.htm"
+                },
+                {
+                    title: '通用拼音與漢語拼音對照',
+                    photo: '/assets/images/tongyong.gif',
+                    linksite: "http://163.26.191.1/formosa/interest1113.htm"
+                },
+
+                {
+                    title: '免費英打網站',
+                    photo: '/assets/images/typing.png',
+                    linksite: "https://10fastfingers.com/typing-test/english"
+                },
+                {
+                    title: '教育部中文譯音轉換系統',
+                    photo: '/assets/images/crptransfer.png',
+                    linksite: "https://crptransfer.moe.gov.tw/index.jsp?SN=%E5%8F%B0%E7%81%A3&sound=1#res"
+                },
+                {
+                    title: '教育百科客語台語拼音',
+                    photo: '/assets/images/pedia.png',
+                    linksite: "https://pedia.cloud.edu.tw/Entry/Detail/?title=%E5%AD%97%E5%85%B8&search=%E5%AD%97%E5%85%B8"
+                },
+                {
+                    title: '注音符號vs羅馬拼音',
+                    photo: '/assets/images/eisland.png',
+                    linksite: "https://www.eisland.com.tw/Main.php?stat=a_S4mNGhk&mid="
+                },
+            ]
+        }
+        var directive_userinfo = {
+            'div.userinfo': {
+                'user<-users': {
+                    'a.linksite > h5.card-title': 'user.title',
+                    'a.linksite@href+': 'user.linksite',
+                    'a.linksite@title+': 'user.title',
+                    'a.linksite > h5.card-title': 'user.title',
+                    'a.linksite > img.card-img-bottom@src+': 'user.photo'
+                }
+            }
+        }
+        $p('.users').render(data_userinfo, directive_userinfo);
+        // 結束 使用者
+    </script>
+    <!-- pure.js end-->
+</body>
+
+<script src="/lib/font-awesome/5.13.0/all.min.js"></script>
+<script src="/lib/popper/1.16.1/popper.min.js"></script>
+<script src="/lib/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+<script src="/lib/_common/include.js"></script>
+
+</html>
